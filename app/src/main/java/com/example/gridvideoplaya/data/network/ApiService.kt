@@ -17,13 +17,3 @@ interface ApiService {
         @Query("page") page: Int
     ): VideoResponse
 }
-
-data class VideoRequest(
-    val Video: VideoQuery
-)
-
-data class VideoQuery(
-    val searchTerm: String = "video",
-    val languages: List<String> = emptyList(),
-    val tagsTaxonomiesIds: List<String> = emptyList()
-)
